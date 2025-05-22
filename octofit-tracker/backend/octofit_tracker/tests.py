@@ -8,8 +8,8 @@ class UserModelTest(TestCase):
 
 class TeamModelTest(TestCase):
     def test_create_team(self):
-        team = Team.objects.create(name='Test Team')
-        self.assertEqual(team.name, 'Test Team')
+        team = Team.objects.create(name='Team Test')
+        self.assertEqual(team.name, 'Team Test')
 
 class ActivityModelTest(TestCase):
     def test_create_activity(self):
@@ -19,11 +19,11 @@ class ActivityModelTest(TestCase):
 
 class LeaderboardModelTest(TestCase):
     def test_create_leaderboard(self):
-        team = Team.objects.create(name='Test Team')
+        team = Team.objects.create(name='Team Test')
         leaderboard = Leaderboard.objects.create(team=team, score=100)
         self.assertEqual(leaderboard.score, 100)
 
 class WorkoutModelTest(TestCase):
     def test_create_workout(self):
-        workout = Workout.objects.create(name='Test Workout', description='Test Description')
-        self.assertEqual(workout.name, 'Test Workout')
+        workout = Workout.objects.create(name='Workout Test', description='Test Description')
+        self.assertEqual(workout.name, 'Workout Test')
